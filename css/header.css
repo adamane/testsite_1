@@ -8,14 +8,27 @@
 body, html{
     height: 100%;
 }
-.bg{
+.banner-header{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c2/Glorious-blue-mountain-range.jpg");
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
+    text-transform: capitalize;
 }
-.bg h1{
+.banner-header h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    
+}
+
+.banner-header h2{
     font-family: 'Ubuntu', sans-serif;
     font-size: 10vh;
     display: grid;
@@ -25,14 +38,14 @@ body, html{
     left: 50%;
     transform: translate(-50%, -50%)
 }
-.bg .author{
+
+.banner-header .author{
     position: absolute;
-    bottom: 5px;
-    left: 10px;
-    text-decoration: none;
+    bottom: -10px;
+    left: 1px;
     justify-content: space-around;
 }
-.bg .author a{
+.banner-header .author a{
     text-decoration: none;
     color:black;
 }
@@ -40,7 +53,8 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
+    min-height: 5vh;
+    max-height: 8vh;
     font-family: 'Poppins', sans-serif;
     background-color: #5D4954;
     z-index: 999;
