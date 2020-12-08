@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body, html{
+    height: 100%;
+}
+.banner-header{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c2/Glorious-blue-mountain-range.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    text-transform: capitalize;
+}
+.banner-header h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    
+}
+
+.banner-header h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.banner-header .author{
+    position: absolute;
+    bottom: -10px;
+    left: 1px;
+    justify-content: space-around;
+}
+.banner-header .author a{
+    text-decoration: none;
+    color:black;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    max-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5D4954;
+    z-index: 999;
+}
+.logo{
+    color: rgb(266,266,266);
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: rgb(266,266,266);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(266,266,266);
+    margin: 5px;
+    
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 50%;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    } 
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5D4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+    opacity: 0.5;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
