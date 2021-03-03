@@ -1,0 +1,11 @@
+.content{
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 1,5cm;
+}
+.content h2{
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    place-content: center;
+    font-size: 90px;
+    
+    }
